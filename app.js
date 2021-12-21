@@ -17,8 +17,8 @@ app.get('/registro', (req,res) =>{
 
 app.use(express.static(path.join(__dirname, './public')));  
 
-app.listen(3002, () => {
-    console.log("Servidor corriendo");
+app.listen(process.env.PORT || 3000,function () {
+    console.log("Servidor corriendo en el puerto 3000");
 });     
 
 
